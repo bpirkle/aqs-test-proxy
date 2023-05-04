@@ -45,6 +45,7 @@ func (s *UniqueDevicesHandler) HandleHTTP(w http.ResponseWriter, r *http.Request
 
 	reqLogger.Log(logger.INFO, string(resBody))
 
-	w.WriteHeader(http.StatusOK)
+	// w.WriteHeader(http.StatusOK)
+	w.WriteHeader(res.StatusCode)
 	w.Write(resBody)
 }
